@@ -1,0 +1,72 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href=" {% static 'Semantic-UI/dist/semantic.min.css'%} ">
+    <link rel="stylesheet" type="text/css" href=" {% static 'style.css'%} ">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="{% static 'Semantic-UI/dist/semantic.min.js' %}"></script>
+    <script src="{% static 'js.js' %}"></script>
+
+    <!--- Example Javascript -->
+  <script>
+      $(document)
+        .ready(function() {
+          $('.ui.menu .ui.dropdown').dropdown({
+            on: 'hover'
+          });
+          $('.ui.menu a.item')
+            .on('click', function() {
+              $(this)
+                .addClass('active')
+                .siblings()
+                .removeClass('active')
+              ;
+            })
+          ;
+        })
+      ;
+  </script>
+
+</head>
+<body>
+<!-- Menu -->
+<div class="ui inverted menu">
+  <a class="item" href="{% url 'appbase:home' %}">Home</a>
+  <div class="ui dropdown item">
+    Produtos
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">Eletronicos</div>
+        <div class="divider"></div>
+      <div class="item">Roupas</div>
+        <div class="divider"></div>
+      <div class="item">Frutas</div>
+    </div>
+  </div>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui transparent inverted icon input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+    <a class="item" href="{% url 'appusuario:login' %}">Login</a>
+  </div>
+</div>
+
+{% block home %}
+{% endblock %}
+
+{% block login_form_user %}
+{% endblock %}
+
+</body>
+</html>
