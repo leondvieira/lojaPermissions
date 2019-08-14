@@ -58,7 +58,8 @@
         <input type="text" placeholder="Search">
       </div>
     </div>
-    <a class="item" href="{% url 'appusuario:login' %}">Login</a>
+    <a class="item" href="{% url 'appusuario:login' %}">Sign in</a>
+    <a class="item" href="{% url 'appusuario:user_create_view' %}">Sign Up</a>
   </div>
 </div>
 
@@ -66,6 +67,9 @@
 {% endblock %}
 
 {% block login_form_user %}
+{% endblock %}
+
+{% block user_create_form %}
 {% endblock %}
 
 </body>

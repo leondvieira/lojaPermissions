@@ -5,4 +5,4 @@ from django.views.generic import TemplateView
 
 
 class LoginUserView(TemplateView):
-    template_name = 'appusuario/login.html'
+    template_name = 'appusuario/login_user_form.html'

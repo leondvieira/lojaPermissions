@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block user_create_form %}
+
+
+<form class="ui form" method="post">
+{% csrf_token %}
+
+  <div class="field">
+    <label>{{ form.username.label }}:</label>
+    {{form.username}}
+  </div>
+  <div class="field">
+    <label>{{ form.password.label }}:</label>
+    {{form.password}}
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
+
+{% endblock %}
