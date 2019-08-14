@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.forms import ModelForm
+from django.forms import ModelForm, forms
 
 
 class UserForm(ModelForm):
@@ -12,3 +12,7 @@ class UserForm(ModelForm):
             'email',
             'first_name'
         ]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['password'].widget.attrs['class'] = 'form-control'

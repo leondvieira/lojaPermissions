@@ -6,14 +6,25 @@
 <form class="ui form" method="post">
 {% csrf_token %}
 
-  <div class="field">
-    <label>{{ form.username.label }}:</label>
-    {{form.username}}
-  </div>
-  <div class="field">
-    <label>{{ form.password.label }}:</label>
-    {{form.password}}
-  </div>
+  {{ form.as_p }}
+
+<!--  <div class="field">-->
+<!--    <label>{{ form.username.label }}:</label>-->
+<!--    {{form.username}}-->
+<!--  </div>-->
+<!--  <div class="field">-->
+<!--    <label>{{ form.password.label }}:</label>-->
+<!--    {{form.password}}-->
+<!--  </div>-->
+<!--  <div class="field">-->
+<!--    <label>{{ form.email.label }}:</label>-->
+<!--    {{form.email}}-->
+<!--  </div>-->
+<!--  <div class="field">-->
+<!--    <label>{{ form.first_name.label }}:</label>-->
+<!--    {{form.first_name}}-->
+<!--  </div>-->
+
   <button class="ui button" type="submit">Submit</button>
 </form>
 

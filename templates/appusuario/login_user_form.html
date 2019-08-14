@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 
 {% block login_form_user %}
-<div class="ui grid">
-  <div class="four wide column">
-      <div class="ui segment">
-        <h1>Produto1</h1>
-      </div>
-  </div>
-</div>
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
 {% endblock %}
