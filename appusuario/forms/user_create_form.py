@@ -1,8 +1,12 @@
 from django.contrib.auth.models import User
-from django.forms import ModelForm, forms
+from django.forms import ModelForm
+
+from django import forms
 
 
 class UserForm(ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+
     class Meta:
         model = User
 
@@ -12,7 +16,3 @@ class UserForm(ModelForm):
             'email',
             'first_name'
         ]
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['password'].widget.attrs['class'] = 'form-control'

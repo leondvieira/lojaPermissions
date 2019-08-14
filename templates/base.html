@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Loja Permissions</title>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href=" {% static 'Semantic-UI/dist/semantic.min.css'%} ">
@@ -58,10 +58,12 @@
         <input type="text" placeholder="Search">
       </div>
     </div>
-    <a class="item" href="{% url 'appusuario:login' %}">Sign in</a>
-    <a class="item" href="{% url 'appusuario:user_create_view' %}">Sign Up</a>
+      {% block logado %}
+      {% endblock %}
   </div>
 </div>
+
+
 
 {% block home %}
 {% endblock %}
