@@ -4,11 +4,11 @@
 
 
 <form class="ui form" method="post">
-{% csrf_token %}
 
-  {{ form.as_p }}
+  {% csrf_token %}
+    {{ form.as_p }}
 
-  <button class="ui button" type="submit">Submit</button>
+  <input class="ui red button" type="submit">
 </form>
 
 {% endblock %}

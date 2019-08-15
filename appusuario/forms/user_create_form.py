@@ -5,14 +5,24 @@ from django import forms
 
 
 class UserForm(ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'required': True}))
+
+    def save(self, commit=True):
+        user = super(UserForm, self).save(commit=False)
+        user.set_password(self.cleaned_data["password"])
+        if commit:
+            user.save()
 
     class Meta:
         model = User
-
-        fields = [
-            'username',
-            'password',
-            'email',
-            'first_name'
-        ]
+        exclude = ('email',
+                   'last_login',
+                   'date_joined',
+                   'is_staff',
+                   'user_permissions',
+                   'groups',
+                   'is_active'
+                   )
+        # widgets = {
+        #     'password': forms.PasswordInput(),
+        # }
