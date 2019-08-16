@@ -15,13 +15,13 @@ class UserForm(ModelForm):
 
     class Meta:
         model = User
-        exclude = ('email',
-                   'last_login',
+        exclude = ('last_login',
                    'date_joined',
                    'is_staff',
                    'user_permissions',
                    'groups',
-                   'is_active'
+                   'is_active',
+                   'is_superuser'
                    )
         # widgets = {
         #     'password': forms.PasswordInput(),

@@ -15,4 +15,4 @@ class UserCreateView(CreateView):
     def form_valid(self, form):
         if  form.is_valid():
             form.save()
-            return redirect('appbase:home')
+            return redirect('appusuario:login')
