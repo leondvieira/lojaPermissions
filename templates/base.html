@@ -44,7 +44,7 @@
     Produtos
     <i class="dropdown icon"></i>
     <div class="menu">
-      <div class="item">Eletronicos</div>
+      <a class="item" href="{% url 'appproduto:produto_create_view' %}">Criar Produto</a>
         <div class="divider"></div>
       <div class="item">Roupas</div>
         <div class="divider"></div>
@@ -72,6 +72,9 @@
 {% endblock %}
 
 {% block user_create_form %}
+{% endblock %}
+
+{% block produto_create_form %}
 {% endblock %}
 
 </body>

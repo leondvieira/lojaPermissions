@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block produto_create_form %}
+<form class="ui form" method="post">
+
+  {% csrf_token %}
+    {{ form.as_p }}
+
+  <input class="ui red button" type="submit" value="Cadastrar Produto">
+</form>
+{% endblock %}
