@@ -12,7 +12,8 @@ class Produto(models.Model):
     nome = models.CharField(max_length=100)
     valor = models.FloatField()
     descricao = models.CharField(max_length=500)
-    comentario = models.ForeignKey(Comentario, on_delete=models.CASCADE)
+    comentario = models.ForeignKey(Comentario, null=True, on_delete=models.CASCADE)
+    quantidade = models.IntegerField()
 
 class NotaFiscal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

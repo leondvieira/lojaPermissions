@@ -13,6 +13,6 @@ class UserCreateView(CreateView):
     # success_url = reverse_lazy("appbase:home")
 
     def form_valid(self, form):
-        if  form.is_valid():
+        if form.is_valid():
             form.save()
             return redirect('appusuario:login')

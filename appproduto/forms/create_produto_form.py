@@ -10,5 +10,6 @@ class ProdutoForm(ModelForm):
         fields = [
             'nome',
             'valor',
-            'descricao'
+            'descricao',
+            'quantidade'
         ]
