@@ -1,10 +1,38 @@
 {% extends 'base.html' %}
 
 {% block produto_create_form %}
-<form class="ui form" method="post">
+<form class="ui fluid form" method="post">
 
-  {% csrf_token %}
-    {{ form.as_p }}
+    {% csrf_token %}
+
+  <div class="field">
+    {{ form.nome }}
+    <div class="ui pointing label">
+      Nome do produto
+    </div>
+  </div>
+
+  <div class="field">
+    {{ form.valor }}
+    <div class="ui pointing label">
+      Valor do produto
+    </div>
+  </div>
+
+  <div class="field">
+    {{ form.descricao }}
+    <div class="ui pointing label">
+      Descrição do produto
+    </div>
+  </div>
+
+  <div class="field">
+    {{ form.quantidade }}
+    <div class="ui pointing label">
+      Quantidade do produto
+    </div>
+  </div>
+
 
   <input class="ui red button" type="submit" value="Cadastrar Produto">
 </form>

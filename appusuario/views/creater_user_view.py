@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
-from django.urls import reverse_lazy
+from django.shortcuts import render
 from django.views.generic import CreateView
 
 from appusuario.forms import UserForm
@@ -15,4 +15,6 @@ class UserCreateView(CreateView):
     def form_valid(self, form):
         if form.is_valid():
             form.save()
-            return redirect('appusuario:login')
+            return redirect('appbase:home')
+        return render(self.template_name, {'form': form})
+
