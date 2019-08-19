@@ -11,5 +11,6 @@ class ProdutoForm(ModelForm):
             'nome',
             'valor',
             'descricao',
-            'quantidade'
+            'quantidade',
+            'imagem'
         ]

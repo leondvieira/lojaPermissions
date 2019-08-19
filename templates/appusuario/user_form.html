@@ -10,11 +10,15 @@
 {% endif %}
 {% endblock %}
 
-{% block login_form_user %}
-<h2>Login</h2>
-<form method="post">
+{% block user_create_form %}
+
+
+<form class="ui form" method="post">
+
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
+    {{ form.as_p }}
+
+  <input class="ui red button" type="submit" value="Cadastrar">
 </form>
+
 {% endblock %}

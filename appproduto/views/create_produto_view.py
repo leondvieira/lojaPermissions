@@ -16,11 +16,11 @@ class ProdutoCreateView(CreateView):
     def get(self, request):
         form = ProdutoForm
         if not request.user.is_authenticated:
-            return redirect('appbase:home')
+            return redirect('appproduto:produto_list_view')
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        form = ProdutoForm(request.POST)
+        form = ProdutoForm(request.POST, request.FILES)
 
         if form.is_valid():
             produto = form.save(commit=False)
@@ -28,7 +28,8 @@ class ProdutoCreateView(CreateView):
             produto.user = request.user
             produto.save()
 
-            return redirect('appbase:home')
+            return redirect('appproduto:produto_list_view')
+
         return render(request, self.template_name, {'form': form})
 
 

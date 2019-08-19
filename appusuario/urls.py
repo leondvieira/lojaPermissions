@@ -12,7 +12,7 @@ app_name = 'appusuario'
 urlpatterns = [
     path('user/login', LoginUserView.as_view(), name='login'),
     path('user/logout', logout_view, name='logout'),
-    path('user/update/<pk>', UserUpdateView.as_view(), name='update'),
+    path('user/update/<pk>', UserUpdateView.as_view(), name='update_user_view'),
     path('cadastro', UserCreateView.as_view(), name='user_create_view'),
     path('user/', include('django.contrib.auth.urls')),
 ]

@@ -4,17 +4,7 @@
 
     {% csrf_token %}
 
-    <h1>nome</h1>
-    {{ form.username }}
-
-    <h1>nome</h1>
-    {{ form.password }}
-
-    <h1>nome</h1>
-    {{ usuario.email }}
-
-    <h1>nome</h1>
-    {{ usuario.first_name }}
+    {{ form.as_p }}
 
     <input type="submit" value="update">
 </form>
