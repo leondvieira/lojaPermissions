@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+
+
+
 {% block logado %}
 {% if user.is_authenticated %}
   <a class="item" href="{% url 'appusuario:update_user_view' pk=user.id %}">{{ user.username }}</a>
@@ -14,7 +17,22 @@
 {% block home %}
     <!-- GRID -->
 <div class="ui grid">
+
+
+
     {% for produto in produtos %}
+
+
+<!--    <script type="text/javascript">-->
+
+<!--         $(document).ready(function(){-->
+<!--         $('#ba').click(function(){-->
+<!--            $('#modalid').modal('show');-->
+<!--         });-->
+<!--         });-->
+
+<!--    </script>-->
+<!--    <div id="modalid">Excluir?</div>-->
 
           <div class="four wide column">
               <div class="ui segment">
@@ -24,7 +42,8 @@
                           <h1 class="ui segment">{{ produto.nome }}</h1>
                       </div>
                       <div class="right aligned column">
-                          <a class="ui segment red button" href="#">X</a>
+                          <a class="ui segment red button" href="{% url 'appproduto:produto_delete_view' produto.id %}">X</a>
+<!--                          <a class="ui segment red button" id="ba">X</a>-->
                       </div>
                   </div>
 

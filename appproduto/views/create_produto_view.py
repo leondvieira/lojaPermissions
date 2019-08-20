@@ -15,6 +15,7 @@ class ProdutoCreateView(CreateView):
 
     def get(self, request):
         form = ProdutoForm
+
         if not request.user.is_authenticated:
             return redirect('appproduto:produto_list_view')
         return render(request, self.template_name, {'form': form})
