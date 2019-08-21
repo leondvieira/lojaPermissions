@@ -2,11 +2,11 @@ from django.contrib.auth.models import User
 from django.db import models
 
 from appproduto.models import Produto
+from lojaPermissions import settings
 
 
 class Pedido(models.Model):
     produto = models.ManyToManyField(Produto)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
     numero_pedido = models.IntegerField()
 
 
