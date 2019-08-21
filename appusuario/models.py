@@ -10,7 +10,7 @@ class ComplementoUser(AbstractUser):
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
-    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name='pedido_from_user')
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, null=True, related_name='pedido_from_user')
 
     class Meta:
         verbose_name = 'user'
