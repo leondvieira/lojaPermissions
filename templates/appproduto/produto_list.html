@@ -57,7 +57,7 @@
                         <h1 class="ui segment">R$ {{ produto.valor }}</h1>
                       </div>
                       <div class="right aligned column">
-                          <button class="ui segment green button">Comprar</button>
+                          <a class="ui segment green button" href="{% url 'appproduto:produto_add_view' produto.id %}">Comprar</a>
                       </div>
 
                   </div>
