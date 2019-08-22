@@ -1,11 +1,12 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+from appusuario.models.complementoUser import ComplementoUser
 from lojaPermissions import settings
 from .comentario import Comentario
 
 class Produto(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     nome = models.CharField(max_length=100)
     valor = models.FloatField()
     imagem = models.ImageField(upload_to='produtos', height_field=None, width_field=None, max_length=100)

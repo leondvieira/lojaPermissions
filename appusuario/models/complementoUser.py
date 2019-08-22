@@ -2,7 +2,7 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-from appproduto.models import Pedido
+from appproduto.models.pedido import Pedido
 
 
 class ComplementoUser(AbstractUser):

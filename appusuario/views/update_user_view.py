@@ -9,7 +9,6 @@ class UserUpdateView(UpdateView):
     fields = [
         'username',
         'password',
-        'email',
-        'first_name'
+        'email'
     ]
     success_url = reverse_lazy("appbase:home")
