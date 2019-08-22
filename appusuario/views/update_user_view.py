@@ -1,7 +1,9 @@
-from django.views.generic.edit import UpdateView
-from django.urls import reverse_lazy
 
-from django.contrib.auth.models import User
+from django.urls import reverse_lazy
+from django.views.generic import UpdateView
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class UserUpdateView(UpdateView):
     model = User

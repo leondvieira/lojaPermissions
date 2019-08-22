@@ -1,9 +1,10 @@
-from django.contrib.auth.models import User
-from django.shortcuts import redirect
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views.generic import CreateView
 
 from appusuario.forms import UserForm
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class UserCreateView(CreateView):
     template_name = "appusuario/user_form.html"

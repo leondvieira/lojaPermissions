@@ -1,8 +1,6 @@
-from django.contrib.auth.models import User
 from django.db import models
 
-from appproduto.models import Produto
-from lojaPermissions import settings
+from .produto import Produto
 
 
 class Pedido(models.Model):

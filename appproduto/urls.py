@@ -1,7 +1,6 @@
 from django.urls import path, include
 
-from appproduto.views.add_produto_view import add_produto_view
-from appproduto.views.create_produto_view import ProdutoCreateView
+from appproduto.views import add_produto_view, ProdutoCreateView
 from appproduto.views.delete_produto_view import ProdutoDeleteView
 from appproduto.views.list_produto_view import ProdutoListView
 

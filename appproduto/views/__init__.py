@@ -1,1 +1,4 @@
-from .create_produto_view import ProdutoCreateView
+from appproduto.views.create_produto_view import ProdutoCreateView
+from appproduto.views import add_produto_view
+from appproduto.views import delete_produto_view
+from appproduto.views import list_produto_view

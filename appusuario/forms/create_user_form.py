@@ -1,7 +1,7 @@
-from django.contrib.auth.models import User
 from django import forms
 
-from appusuario.models.complementoUser import ComplementoUser
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class UserForm(forms.ModelForm):
 

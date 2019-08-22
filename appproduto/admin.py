@@ -1,9 +1,6 @@
 from django.contrib import admin
 
-from .models.pedido import Pedido
-from .models.produto import Produto
-from .models.comentario import Comentario
-
+from appproduto.models import Comentario, Produto, Pedido
 
 # Register your models here.
 

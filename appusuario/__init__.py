@@ -1,2 +1,3 @@
-from .models import ComplementoUser
-from .models import UserAdmin
+# -*- coding: utf-8 -*-
+default_app_config = 'appcertificado.apps.AppusuarioConfig'
+
