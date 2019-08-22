@@ -10,5 +10,5 @@ class Pedido(models.Model):
     numero_pedido = models.IntegerField()
 
 
-    def __str__(self):
+    def __int__(self):
         return self.numero_pedido
