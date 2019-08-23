@@ -1,14 +1,14 @@
 from django.views.generic.edit import UpdateView
 from django.urls import reverse_lazy
 
-from django.contrib.auth.models import User
+from appusuario.models import ComplementoUser
+
 
 class UserUpdateView(UpdateView):
-    model = User
+    model = ComplementoUser
     template_name = "appusuario/user_form.html"
     fields = [
         'username',
-        'password',
         'email',
         'first_name'
     ]

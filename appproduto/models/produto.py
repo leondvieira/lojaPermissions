@@ -1,7 +1,6 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.db import models
 
-from lojaPermissions import settings
 from .comentario import Comentario
 
 class Produto(models.Model):
