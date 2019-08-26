@@ -1,16 +1,14 @@
-from django.contrib.auth.models import User
-from django.contrib.auth import get_user_model
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.views.generic import CreateView
 
 from appusuario.forms import UserForm
+from appusuario.models import ComplementoUser
 
-User = get_user_model()
 
 class UserCreateView(CreateView):
     template_name = "appusuario/user_form.html"
-    model = User
+    model = ComplementoUser
     form_class = UserForm
     # success_url = reverse_lazy("appbase:home")
 

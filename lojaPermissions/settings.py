@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'lojaPermissions',
     'appusuario',
-    'appproduto'
+    'appproduto',
+    'global_permissions'
 ]
 
 MIDDLEWARE = [

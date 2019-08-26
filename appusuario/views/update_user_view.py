@@ -12,4 +12,4 @@ class UserUpdateView(UpdateView):
         'email',
         'first_name'
     ]
-    success_url = reverse_lazy("appbase:home")
+    success_url = reverse_lazy("appproduto:list_produto_view")
