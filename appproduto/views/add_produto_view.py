@@ -1,7 +1,4 @@
-from random import random
-
-from django.shortcuts import get_object_or_404, redirect
-from django.views import View
+from django.shortcuts import redirect
 
 from appproduto.models import Produto, Pedido
 

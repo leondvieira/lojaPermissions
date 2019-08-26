@@ -8,8 +8,10 @@ from django.views.generic import CreateView
 
 from appproduto.forms.create_produto_form import ProdutoForm
 from appproduto.models.produto import Produto
+from appproduto.views.core.CoreMixinDispatch import CoreMixinDispatch
 
-class ProdutoCreateView(CreateView):
+
+class ProdutoCreateView(CreateView, CoreMixinDispatch):
     template_name = "appproduto/produto_create_form.html"
     model = Produto
 

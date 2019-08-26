@@ -1,0 +1,1 @@
+from appproduto.views.core import CoreMixinDispatch
