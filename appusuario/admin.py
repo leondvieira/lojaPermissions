@@ -14,7 +14,7 @@ class MyUserAdmin(UserAdmin):
     form = UserForm
 
     fieldsets = UserAdmin.fieldsets + (
-        (None, {'fields' : ('pedido',)}),
+        (None, {'fields': ('pedido',)}),
     )
 
 

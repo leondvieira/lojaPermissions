@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.shortcuts import redirect
 from django.shortcuts import render
 
@@ -11,7 +12,7 @@ from appproduto.models.produto import Produto
 from appproduto.views.core.CoreMixinDispatch import CoreMixinDispatch
 
 
-class ProdutoCreateView(CreateView, CoreMixinDispatch):
+class ProdutoCreateView(CreateView, PermissionRequiredMixin):
     template_name = "appproduto/produto_create_form.html"
     model = Produto
 

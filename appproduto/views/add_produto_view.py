@@ -1,9 +1,14 @@
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import redirect
 
 from appproduto.models import Produto, Pedido
 
 
 def add_produto_view(request, pk):
+
+
+    # if not request.user.has_perm('global_permissions.pode_acessar_pagina_config'):
+    #     raise PermissionDenied
 
     user = request.user
     user.save()

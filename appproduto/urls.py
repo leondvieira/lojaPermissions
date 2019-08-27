@@ -11,5 +11,5 @@ urlpatterns = [
     path('', ProdutoListView.as_view(), name='produto_list_view'),
     path('produto/add/pedido/<pk>', add_produto_view, name='produto_add_view'),
     path('produto/deletar/<pk>', ProdutoDeleteView.as_view(), name='produto_delete_view'),
-    path('produto/cadastrar', ProdutoCreateView.as_view(), name='produto_create_view'),
+    path('produto/cadastrar', ProdutoCreateView.as_view(), name='appproduto.add_produto'),
 ]
